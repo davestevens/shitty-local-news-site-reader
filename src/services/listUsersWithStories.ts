@@ -1,6 +1,12 @@
 const QUERY_HASH = "7223fb3539e10cad7900c019401669e7";
 
-export default (): Promise<any> => {
+export interface IUser {
+  id: string;
+  profile_pic_url: string;
+  username: string;
+}
+
+export default (): Promise<IUser[]> => {
   const variables = encodeURIComponent(
     JSON.stringify({
       only_stories: true
