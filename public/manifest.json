@@ -1,0 +1,12 @@
+{
+  "name": "Instagram Story Viewer",
+  "description": "Anonymously view instagram stories",
+  "version": "0.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/"],
+      "js": ["build/bundle.js"]
+    }
+  ],
+  "manifest_version": 2
+}
