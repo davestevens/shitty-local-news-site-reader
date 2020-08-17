@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "content_scripts": [
     {
-      "matches": ["https://www.leicestermercury.co.uk/*"],
+      "matches": ["<all_urls>"],
       "js": ["build/bundle.js"]
     }
   ],

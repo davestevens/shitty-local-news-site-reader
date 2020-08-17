@@ -11,3 +11,5 @@ export const DISALLOWED_ARTICLE_ELEMENTS = [
   "script",
   "figure"
 ];
+
+export const COOKIE_NAME = "reach_mrcv";
