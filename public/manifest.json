@@ -5,6 +5,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.leicestermercury.co.uk/*"],
+      "css": ["article.css"],
       "js": ["build/bundle.js"]
     }
   ],

@@ -14,7 +14,7 @@
 <style>
   .modal {
     position: fixed;
-    z-index: 5;
+    z-index: 9999999;
     top: 0;
     left: 0;
     width: 100vw;
@@ -30,11 +30,12 @@
   }
 
   .modal__wrapper {
+    position: relative;
     padding: 24px;
     background: white;
     border-radius: 8px;
-    width: 23vw;
-    max-height: 80vh;
+    width: 39vw;
+    height: 80vh;
   }
 
   .modal__content {
@@ -50,7 +51,6 @@
     right: 4px;
   }
 </style>
-
 
 <svelte:window on:keydown={handleKeydown} />
 
