@@ -41,7 +41,6 @@
   .modal__content {
     width: 100%;
     height: 100%;
-    overflow: auto;
   }
 
   .modal__close {

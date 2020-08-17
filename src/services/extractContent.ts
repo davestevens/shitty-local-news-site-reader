@@ -11,7 +11,7 @@ let article: HTMLElement;
 const getElement = (selector: string): HTMLElement => {
   const element = article.querySelector(selector);
   if (!element) {
-    return document.createElement("div");
+    throw new Error(`No element (${selector}) found.`);
   }
   return element.cloneNode(true) as HTMLElement;
 };
@@ -41,17 +41,21 @@ const getContent = (): HTMLElement => {
   return content;
 };
 
-export default (): HTMLElement => {
+export default (): HTMLElement | null => {
   const container = document.createElement("div");
   article = document.getElementsByTagName("article")[0];
   if (!article) {
     throw new Error("Can't find article");
   }
 
-  container.appendChild(getHeadline());
-  container.appendChild(getSubtitle());
-  container.appendChild(getMetaData());
-  container.appendChild(getContent());
+  try {
+    container.appendChild(getHeadline());
+    container.appendChild(getSubtitle());
+    container.appendChild(getMetaData());
+    container.appendChild(getContent());
+  } catch {
+    return null;
+  }
 
   return container;
 };
