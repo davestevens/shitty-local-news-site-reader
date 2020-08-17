@@ -1,10 +1,10 @@
 {
-  "name": "Instagram Story Viewer",
-  "description": "Anonymously view instagram stories",
+  "name": "Shitty Local News Site Reader",
+  "description": "Extract the actual story to be able to read it without the content jumping around to show ads.",
   "version": "0.0.0",
   "content_scripts": [
     {
-      "matches": ["https://www.instagram.com/"],
+      "matches": ["https://www.leicestermercury.co.uk/*"],
       "js": ["build/bundle.js"]
     }
   ],

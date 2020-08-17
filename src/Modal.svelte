@@ -51,6 +51,7 @@
   }
 </style>
 
+
 <svelte:window on:keydown={handleKeydown} />
 
 <div class="modal" class:show on:click={close}>
