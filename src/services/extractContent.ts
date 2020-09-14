@@ -11,7 +11,7 @@ let article: HTMLElement;
 const getElement = (selector: string): HTMLElement => {
   const element = article.querySelector(selector);
   if (!element) {
-    throw new Error(`No element (${selector}) found.`);
+    console.warn(`No element (${selector}) found.`);
   }
   return element.cloneNode(true) as HTMLElement;
 };
@@ -45,7 +45,7 @@ export default (): HTMLElement | null => {
   const container = document.createElement("div");
   article = document.getElementsByTagName("article")[0];
   if (!article) {
-    throw new Error("Can't find article");
+    console.warn("Can't find article");
   }
 
   try {
